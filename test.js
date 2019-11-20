@@ -1,5 +1,7 @@
-const sayHello = () => {
-  console.log('Hello!')
+const cat = {
+    name: 'Tama',
+    age: 4,
+    sex: 'female'
 }
-
-setTimeout(sayHello, 3000)
+console.log(Object.keys(cat))
+console.log(Object.values(cat))
