@@ -5,6 +5,7 @@ const str4 = '{"a": undefined}'
 const str5 = '{"a": 123}'
 const str6 = '{a: 123}'
 
+// str1 のパース結果
 try {
     console.log(JSON.parse(str1))    
 } catch (error) {
@@ -13,6 +14,22 @@ try {
     // 正しくは "abc"
 }
 
+// str2 のパース結果
+try {
+    console.log(JSON.parse(str2))    
+} catch (error) {
+    console.log(error)
+    // 'abc' という文字列は正しい JSON ではないから。
+    // 正しくは "abc"
+}
 
 
-console.log(JSON.parse(str3))
+// str3 のパース結果
+try {
+    console.log(JSON.parse(str3))    
+} catch (error) {
+    console.log(error)
+    // "abc" は正しい JSON なのでパースできる
+}
+
+// ..str6 まで試してみる
