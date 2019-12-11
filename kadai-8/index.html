@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            label, input, button {
+                font-size: 24px;
+            }
+            label {
+                font-weight: bold;
+                font-family: sans-serif;
+            }
+            button {
+                color: lime;
+                background-color: darkgreen;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+       <label for="my-value">入力</label>
+        <input id="my-value" type="text" value="abc" />
+        <butto id="button">実行</button>
+        <script>
+            const input = document.getElementById('my-value')
+            const button = document.getElementById('button')
+            button.addEventListener('click', () => {
+                alert(input.value)
+            })
+        </script>
+    </body>
+</html>
