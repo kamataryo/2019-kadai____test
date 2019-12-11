@@ -1,30 +1,28 @@
 <html>
-    <head>
-        <style>
-            label, input, button {
-                font-size: 24px;
+<head>
+<style>
+    button {
+        font-size: 50px;
+    }
+</style>
+</head>
+<body>
+    <button id="button">omikkuji wo hiku</button>
+    <script>
+        const button = document.getElementById('button')
+        button.addEventListener('click', () => {
+            const num = Math.random()
+            if(num < 0.5) {
+                alert('吉です')
+            } else if(num < 0.8) {
+                alert('中吉です')
+            } else if (num < 0.95) {
+                alert('大吉です')
+            } else {
+                alert('きょうです')
             }
-            label {
-                font-weight: bold;
-                font-family: sans-serif;
-            }
-            button {
-                color: lime;
-                background-color: darkgreen;
-                border-radius: 5px;
-            }
-        </style>
-    </head>
-    <body>
-       <label for="my-value">入力</label>
-        <input id="my-value" type="text" value="abc" />
-        <butto id="button">実行</button>
-        <script>
-            const input = document.getElementById('my-value')
-            const button = document.getElementById('button')
-            button.addEventListener('click', () => {
-                alert(input.value)
-            })
-        </script>
-    </body>
+            
+        })
+    </script>
+</body>
 </html>
